@@ -5,5 +5,37 @@
 @tailwind utilities;
 
 body {
-  @apply font-roboto;
+  @apply font-roboto bg-appGray;
+}
+
+.heading__text {
+  @apply font-roboto font-black text-4xl;
+}
+
+.container {
+  @apply w-[25rem] bg-appBlack px-8 py-16 text-white;
+}
+
+.input__container {
+  @apply w-full bg-applightBlack  flex items-center gap-5 py-4 rounded-md px-4 mt-9;
+}
+
+.input__field {
+  @apply outline-none bg-transparent text-applightGray text-sm w-full;
+}
+
+.icon__style {
+  @apply text-appPaleGray text-xl;
+}
+
+.frgt__pwsd {
+  @apply text-appOrange text-xs text-right mt-3 font-normal;
+}
+
+.btn {
+  @apply bg-appOrange rounded-full p-4;
+}
+
+.logos {
+  @apply bg-applightBlack p-2 text-4xl rounded-full;
 }

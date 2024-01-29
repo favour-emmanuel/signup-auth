@@ -9,6 +9,10 @@ export default {
       colors: {
         appBlack: "#1D1D1D",
         applightBlack: "#262626",
+        appGray: "#e5e5e5",
+        applightGray: "#676767",
+        appPaleGray: "#626262",
+        appOrange: "#FF4B26",
       },
     },
   },
