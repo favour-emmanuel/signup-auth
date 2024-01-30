@@ -1,8 +1,9 @@
-import { FaUser } from "react-icons/fa6";
 import { PiLockFill } from "react-icons/pi";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { FaUser } from "react-icons/fa6";
+import Footer from "./Footer";
 
-const SignIn = () => {
+const SignUp = () => {
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="container">
@@ -38,4 +39,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignUp;
