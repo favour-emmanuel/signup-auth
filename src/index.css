@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-  @apply w-[25rem] bg-appBlack px-8 py-16 text-white;
+  @apply w-[25rem] bg-appBlack px-8 py-10 text-white;
 }
 
 .input__container {
@@ -33,7 +33,7 @@ body {
 }
 
 .btn {
-  @apply bg-appOrange rounded-full p-4;
+  @apply bg-appOrange rounded-full p-4 transition shadow-lg shadow-appOrange  duration-300 backdrop-blur-md;
 }
 
 .logos {

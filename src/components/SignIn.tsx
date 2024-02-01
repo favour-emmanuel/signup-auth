@@ -1,6 +1,10 @@
 import { FaUser } from "react-icons/fa6";
 import { PiLockFill } from "react-icons/pi";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { FiEye } from "react-icons/fi";
+import { FaApple, FaFacebookF } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
+import Footer from "./Footer";
 
 const SignIn = () => {
   return (
@@ -24,6 +28,7 @@ const SignIn = () => {
             placeholder="Password"
             className="input__field"
           />
+          <FiEye className="icon__style" />
         </div>
         <h3 className="frgt__pwsd">Forgot Password?</h3>
 
@@ -33,6 +38,7 @@ const SignIn = () => {
             <FaArrowRightLong className="text-xl " />
           </button>
         </div>
+        <Footer />
       </div>
     </div>
   );
