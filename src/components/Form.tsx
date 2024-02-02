@@ -1,14 +1,15 @@
 import { FormEvent, useState } from "react";
 
-const [person, setPerson] = useState({
-  name: "",
-  age: 0,
-});
-
 const Form = () => {
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
+    console.log(person);
   };
+
+  const [person, setPerson] = useState({
+    name: "",
+    age: 0,
+  });
   return (
     <form className="flex flex-col justify-center gap-3 items-center h-screen">
       <div className="flex items-center gap-3">
@@ -16,6 +17,7 @@ const Form = () => {
         <input
           id="name"
           type="text"
+          value={person.name}
           className=" border border-blue-400 outline-none w-[18rem] py-2 px-3 rounded-md"
           onChange={(event) =>
             setPerson({ ...person, name: event.target.value })
@@ -27,7 +29,11 @@ const Form = () => {
         <input
           id="age"
           type="number"
+          value={person.age}
           className=" border border-blue-400 outline-none w-[18rem] py-2 px-3 rounded-md"
+          onChange={(event) =>
+            setPerson({ ...person, age: parseInt(event.target.value) })
+          }
         />
       </div>
       <button
