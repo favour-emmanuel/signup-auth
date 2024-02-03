@@ -1,27 +1,22 @@
 import { FormEvent, useState } from "react";
+import { FieldValue, FieldValues, useForm } from "react-hook-form";
 
 const Form = () => {
-  const handleSubmit = (event: FormEvent) => {
-    event.preventDefault();
-    console.log(person);
-  };
+  const { register, handleSubmit } = useForm();
 
-  const [person, setPerson] = useState({
-    name: "",
-    age: 0,
-  });
+  const onSubmitForm = (data: FieldValues) => console.log(data);
   return (
-    <form className="flex flex-col justify-center gap-3 items-center h-screen">
+    <form
+      onSubmit={handleSubmit(onSubmitForm)}
+      className="flex flex-col justify-center gap-3 items-center h-screen"
+    >
       <div className="flex items-center gap-3">
         <label htmlFor="name">Name:</label>
         <input
           id="name"
           type="text"
-          value={person.name}
           className=" border border-blue-400 outline-none w-[18rem] py-2 px-3 rounded-md"
-          onChange={(event) =>
-            setPerson({ ...person, name: event.target.value })
-          }
+          {...register("name")}
         />
       </div>
       <div className="flex items-center gap-3">
@@ -29,11 +24,8 @@ const Form = () => {
         <input
           id="age"
           type="number"
-          value={person.age}
           className=" border border-blue-400 outline-none w-[18rem] py-2 px-3 rounded-md"
-          onChange={(event) =>
-            setPerson({ ...person, age: parseInt(event.target.value) })
-          }
+          {...register("age")}
         />
       </div>
       <button
